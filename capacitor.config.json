@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "attedance",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

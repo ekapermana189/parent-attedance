@@ -1,0 +1,7 @@
+{
+  "name": "attedance",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
