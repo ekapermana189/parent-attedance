@@ -1,0 +1,39 @@
+<ion-content class="ion-padding">
+  <ion-slides pager="true">
+
+    <!-- Slide 1 -->
+    <ion-slide class="flex flex-col justify-center items-center">
+      <ion-text color="dark">
+        <h1 class="text-2xl font-semibold">Selamat Datang di Aplikasi
+          Absensi Siswa</h1>
+        <p class="text-sm font-normal">Sekarang anda bisa melihat posisi
+          putra-putri anda lewat aplikasi
+          absensi siswa ini</p>
+        <!-- fill="outline" -->
+      </ion-text>
+      <img src="assets/img/screen1.svg" class="py-10">
+      <ion-button expand="block" (click)="next()" color="warning" fill="outline">Selanjutnya</ion-button>
+    </ion-slide>
+
+    <!-- Slide 2 -->
+    <ion-slide class="flex flex-col justify-center items-center">
+      <ion-text color="dark">
+        <h1 class="text-2xl font-semibold">Dapat memantau siswa saat datang & pulang</h1>
+        <p class="text-sm font-normal">Dapatkan notifikasi absensi siswa
+          disetiap datang & pulang dari aplikasi absensi </p>
+      </ion-text>
+      <img src="assets/img/screen2.svg" class="py-10">
+      <ion-button expand="block" (click)="next()" color="warning" fill="outline">Selanjutnya</ion-button>
+    </ion-slide>
+
+    <!-- Slide 3 -->
+    <ion-slide class="flex flex-col justify-center items-center">
+      <ion-text color="dark">
+        <h1 class="text-3xl font-bold pb-20">Let's Start</h1>
+      </ion-text>
+      <img src="assets/img/Approved.svg" class="py-10">
+      <ion-button (click)="start()" color="warning" expand="block" fill="outline">Klik disini</ion-button>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

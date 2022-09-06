@@ -1,0 +1,40 @@
+<ion-header class="ion-no-border rounded-b-lg">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div class="group flex items-center mb-2 mt-2 bg-white py-5 px-5">
+    <img class="shrink-0 h-16 w-16 rounded-full" src="assets/icon/avatar.svg" alt="avatar.jpg" />
+    <div class="ltr:ml-5 rtl:mr-3 ml-4">
+      <p class="text-xl font-medium text-slate-700">John Doe</p>
+      <p class="text-base font-medium text-slate-500 ">Wali dari dia</p>
+    </div>
+  </div>
+
+  <ion-list lines=" none">
+    <div *ngFor="let feature of features" class="cursor-pointer">
+      <ion-item button (click)="feature.fn" [routerLink]="feature.url" class="my-1 p-1"
+        [disabled]="!feature.activeMenu">
+
+        <img [src]=" feature.imgSrc" [alt]="feature.imgSrc" class="p-1 w-8">
+
+        <p class="text-xl ml-5" [class.text-medium]="!feature.activeMenu">{{
+          feature.title }}</p>
+      </ion-item>
+    </div>
+
+
+  </ion-list>
+
+
+  <div class="flex flex-col justify-center items-center gap-1 h-72">
+    <img src="assets/img/logabs.svg" alt="" class="w-20">
+    <p class="text-xs font-bold">Designed by Sitektif</p>
+  </div>
+
+</ion-content>

@@ -1,0 +1,59 @@
+.header{
+  display: flex;
+  // flex: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: #FFA825;
+}
+
+.timeline-wrapper {
+    margin-top: 30px;
+    margin-left: 1.5rem;
+    border-left: 3px solid rgb(216, 216, 216);
+    padding-right: 20px;
+  }
+  .node {
+    padding-left: .8rem;
+    padding-bottom: 1.5rem;
+    position: relative;
+  }
+  .node h3, .node p {
+    margin: 0;
+  }
+  .node::before {
+    content: "";
+    width: .5rem;
+    height: .5rem;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: .3rem;
+    left: -.3rem;
+  }
+
+  ion-card{
+    -moz-box-shadow: none;
+    -goog-ms-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px gray solid;
+    border-radius: 20px;
+  }
+
+  .top-section{
+    position:sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100px;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;   
+    box-shadow:1px 1px 1px 1px #e2e2e2;
+    z-index: 50;
+    
+}

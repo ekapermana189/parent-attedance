@@ -1,0 +1,103 @@
+<ion-header class="header ion-no-header rounded-b-lg ">
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="text-center -ml-12">Riwayat</ion-title>
+  </ion-toolbar>
+  <!-- <ion-toolbar>
+    <ion-segment [(ngModel)]="selectedMode" scrollable>
+      <ion-segment-button [value]="mode" *ngFor="let mode of modes">
+        <ion-label>{{mode}}</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content>
+
+  <!-- <div>
+    <ion-item (click)="showPicker = !showPicker">
+      <ion-label>Date</ion-label>
+      <ion-text slot="end">
+        {{ formattedString }}
+      </ion-text>
+    </ion-item>
+
+    <ion-datetime *ngIf="showPicker" #datetime [value]="dateValue" size="cover"
+      (ionChange)="dateChanged(datetime.value)" showDefaultButtons="true" (ionCancel)="showPicker = false;">
+    </ion-datetime>
+  </div> -->
+  <ion-card class="flex flex-row justify-center items-center mt-5 card1">
+    <img src="assets/icon/history.svg" alt="" class="w-1/2 p-5">
+    <p class="text-black"><b>Riwayat Kehadiran</b><br>lorem ipsum Lorem Ipsum is simply dummy text of the printing and
+      typesetting industry. Lorem
+      Ipsum has been the
+    </p>
+  </ion-card>
+  <h3 class="ml-5 mt-5">Total Kehadiran</h3>
+  <ion-card>
+    <div class="flex flex-row gap-6 justify-center items-center">
+      <ion-card-header class="text-3xl font-black text-center text-black mt-3">80
+        <p class="text-sm font-normal">Hadir</p>
+      </ion-card-header>
+      <hr class="border-3 border-solid border-warning border-l h-10">
+      <ion-card-header class=" text-3xl font-black text-center text-red-500 mt-3">20
+        <p class="text-sm font-normal">Tidak Hadir</p>
+      </ion-card-header>
+      <hr class="border-3 border-solid border-warning border-l h-10">
+      <ion-card-header class=" text-3xl font-black text-center text-orange-500 mt-3">4
+        <p class="text-sm font-normal">Telat</p>
+      </ion-card-header>
+    </div>
+  </ion-card>
+
+  <h3 class="ml-5 mt-5">Cari Data Riwayat</h3>
+  <ion-card class="py-5">
+    <ion-item fill="outline" lines="none" id="open-modal" class="mb-5 px-5">
+      <ion-icon name="calendar-outline" slot="start"></ion-icon>
+      <ion-label>Start Date</ion-label>
+      <ion-text slot="end">{{ formattedString }}</ion-text>
+    </ion-item>
+
+    <ion-item fill="outline" lines="none" id="open-modal-1" class="mb-5 px-5">
+      <ion-icon name="calendar-outline" slot="start"></ion-icon>
+      <ion-label>End</ion-label>
+      <ion-text slot="end">{{ formattedStrings }}</ion-text>
+    </ion-item>
+
+    <ion-button expand="block" color="warning" class="px-5" routerLink="/search-history">Cari Riwayat</ion-button>
+
+  </ion-card>
+
+
+
+  <ion-modal trigger="open-modal">
+    <ng-template>
+      <ion-content>
+        <ion-datetime #datetime [value]="dateValue" size="cover" (ionChange)="dateChanged(datetime.value)"
+          (ionCancel)="showPicker = false;" presentation="date">
+          <ion-buttons slot="buttons">
+            <ion-button (click)="close()">Dismiss</ion-button>
+            <ion-button (click)="select()" color="warning">Select</ion-button>
+          </ion-buttons>
+        </ion-datetime>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal trigger="open-modal-1">
+    <ng-template>
+      <ion-content>
+        <ion-datetime #datetime [value]="dateValues" size="cover" (ionChange)="dateChanges(datetime.value)"
+          (ionCancel)="showPicker = false;" presentation="date">
+          <ion-buttons slot="buttons">
+            <ion-button (click)="close()">Dismiss</ion-button>
+            <ion-button (click)="yes()" color="warning">Select</ion-button>
+          </ion-buttons>
+        </ion-datetime>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

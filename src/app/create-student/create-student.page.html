@@ -1,0 +1,77 @@
+<ion-header class="header ion-no-border rounded-b-lg">
+  <ion-toolbar color="warning">
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2 class="ml-1 text-start text-2xl font-bold">Tambah Akun Murid</h2>
+  <div class="flex flex-col justify-center ">
+    <form>
+      <ion-list>
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Name</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Place of birth</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Date of birth</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Gender</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">No Handphone</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Address</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-card class="ion-no-margin upload-picture">
+          <ion-card-header class="upload-picture__header">
+            Upload Foto Profil
+            <span class="inline-block text-danger">*</span>
+          </ion-card-header>
+          <ion-card-content class="upload-picture__content" (click)="onTakePhoto('profilePhoto')">
+
+            <div class="upload-picture__content-box">
+              <ion-icon name="image-outline"></ion-icon>
+              <ion-label>Upload Foto</ion-label>
+            </div>
+
+          </ion-card-content>
+        </ion-card>
+
+
+        <ion-button type="submit" expand="block"> Simpan
+          <ion-icon slot="end" name="create"></ion-icon>
+        </ion-button>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>

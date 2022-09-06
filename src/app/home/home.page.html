@@ -1,20 +1,109 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="header ion-no-border">
+  <div class="logo">
+    <img src="assets/icon/habsen.svg" alt="">
+  </div>
+  <ion-buttons>
+    <ion-badge slot="start" class="absolute z-10 mb-3 ml-4" color="primary">9+</ion-badge>
+    <ion-icon name="notifications-outline"
+      class="text-3xl text-white mr-3 bg-orange-600 hover:bg-orange-400 active:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 rounded-md"
+      (click)="notif()"></ion-icon>
+    <ion-icon name="person-circle-outline"
+      class="text-3xl text-white mr-2 hover:bg-orange-400 active:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-500"
+      (click)="set()">
+    </ion-icon>
+  </ion-buttons>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="container bg-warning rounded-b-lg h-130">
+    <div class="flex flex-row justify-between">
+      <div class="flex flex-col text-white ml-5">
+        <p class="text-base mt-10 ">Selamat</p>
+        <p class="text-4xl font-bold">Datang</p>
+        <p class="p1">wali dari <b>Abdul</b></p>
+      </div>
+      <div class="flex flex-col flex-end h-0 mx-15 my-4 ">
+        <img src="assets/img/people.svg" alt="">
+      </div>
+    </div>
+    <ion-card class="flex flex-row gap-0 mt-8">
+      <ion-card-header class="flex flex-col items-start" style="margin-left: -6px;">
+        <p class="leading-3">Total</p>
+        <p class="text-4xl font-bold text-warning tracking-tighter">Kehadiran</p>
+        <p class="text-black">sampai bulan <b>Mei 2022</b></p>
+      </ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <div class="flex flex-row items-start" style="margin-left:-10px;">
+        <ion-card-header class="text-3xl font-black text-center text-black mt-3">80
+          <p class="text-sm font-normal">Hadir</p>
+        </ion-card-header>
+        <ion-card-header class=" text-3xl font-black text-center text-red-500 mt-3" style="margin-left:-15px ;">20
+          <p class="text-sm font-normal">Tidak Hadir</p>
+        </ion-card-header>
+        <ion-card-header class=" text-3xl font-black text-center text-orange-500 mt-3" style="margin-left:-15px ;">4
+          <p class="text-sm font-normal">Telat</p>
+        </ion-card-header>
+      </div>
+    </ion-card>
+
+    <!-- apps menu -->
+    <div class="container grid grid-cols-4 gap-2 px-2 my-2 md:grid-cols-4">
+      <div *ngFor="let feature of features" class="cursor-pointer">
+        <ion-card (click)="feature?.fn ? feature?.fn() : null" [routerLink]="feature?.url ? feature?.url : null"
+          class="p-2 m-3 rounded ion-activatable ripple-parent" [disabled]="!feature.activeMenu">
+          <ion-card-content class="p-0">
+            <div class="flex flex-col items-center justify-center">
+              <img [src]="feature.imgSrc" [alt]="feature.imgSrc" class="p-1" />
+            </div>
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+        <div class="flex flex-col items-center justify-center" style="margin-top: -10px;">
+          <ion-label class="p-1 text-sm text-center text-white leading-4" [class.text-medium]="!feature.activeMenu">{{
+            feature.title }}
+          </ion-label>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ion-card kedua -->
+    <div class="middle-section">
+      <div class="flex flex-row flex-shrink-0">
+
+        <h4 class="ml-3 text-black font-semibold text-lg">Absensi Hari ini</h4>
+      </div>
+      <ion-card class="flex flex-col items-center" style="margin-top: -3px;">
+        <div class="flex flex-row justify-between" style="margin-top:-10px ;">
+          <h6 class="mr-20 text-sm"><b>Kelas Pagi</b></h6>
+          <h6 class="ml-20 text-sm"><b>Senin,</b> 22 Juli 2022</h6>
+        </div>
+        <h1 class="text-3xl font-bold text-black">08:00-11:00</h1>
+        <hr>
+        <h1 class="text-black">15 Menit</h1>
+        <p style="text-align:center; margin-top:-10px;">menuju pulang</p>
+        <hr class="m-1">
+        <ion-button color="warning" expand="block" class="m-3" size="medium" (click)="det()">Detail</ion-button>
+      </ion-card>
+    </div>
+    <!-- ion-card kedua -->
+
+    <!-- ion-card ketiga -->
+    <div class="flex flex-row justify-between -mb-4 -mt-3">
+      <h3 class="ml-5 text-xl font-medium">info</h3>
+      <h3 class="mr-5 text-xl font-bold">Lainnya</h3>
+    </div>
+    <ion-card button class="ion-no-padding profile-card" routerLink="/myprofile">
+      <ion-card-title>
+        Lengkapi data diri anda di form profile
+      </ion-card-title>
+      <ion-card-subtitle>
+        pastikan data anda sudah lengkap
+        agar anda dapat menerima informasi
+        dari aplikasi absensi
+      </ion-card-subtitle>
+      <img src="assets/img/lengpro.svg" alt="">
+    </ion-card>
+
+
 </ion-content>

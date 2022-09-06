@@ -1,0 +1,27 @@
+<ion-header class="header ion-no-header rounded-b-lg">
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Absensiku</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="flex flex-row justify-between p-2">
+    <h2 class="ml-2 text-start text-2xl font-bold">Absensi Hari ini</h2>
+    <ion-button class="mt-4" color="warning" (click)="openShare()">Riwayat</ion-button>
+  </div>
+  <ion-card class="mt-5">
+    <ion-card-header>
+      <ion-card-title>Ahmad Harli</ion-card-title>
+      <ion-card-subtitle>Level 2 Pagi</ion-card-subtitle>
+    </ion-card-header>
+    <p class="mx-4 text-xl">
+      Rumah Tahfidz Jailul Qurani
+    </p>
+    <ion-chip class="bg-danger my-5 mx-2">
+      <ion-label class="text-white text-xs">Belum Selesai</ion-label>
+    </ion-chip>
+  </ion-card>
+</ion-content>

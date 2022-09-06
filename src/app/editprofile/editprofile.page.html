@@ -1,0 +1,70 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>My Profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="relative group flex flex-col items-center  mt-5">
+    <img class="shrink-0 h-auto w-1/2 rounded-full" src="assets/icon/avatar.svg" alt="avatar.jpg" />
+  </div>
+
+  <div class="flex flex-col justify-center mt-10">
+    <form>
+      <ion-list>
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Name</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Place of birth</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Date of birth</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Gender</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">No Handphone</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline" class="ion-margin-bottom">
+          <ion-label position="floating">Address</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <div class="flex flex-col gap-2 justify-center">
+          <ion-button type="submit" expand="block"> Save
+            <ion-icon slot="end" name="create"></ion-icon>
+          </ion-button>
+
+          <ion-button type="reset" expand="block" color="danger">Reset
+            <ion-icon slot="end" name="refresh-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,20 @@
+ion-content {
+    --background: #ffffff;
+}
+ 
+ion-slides {
+    bottom: 3%;
+    height: 95vh;
+    --bullet-background-active: #FFA825;
+    --bullet-background: #000;
+    --bullet-top:80px;
+}
+
+ion-button{
+    // position: absolute;
+    margin-top: 20px;
+    width: 60%;
+    text-transform: capitalize;
+    font-size: medium;
+}
+
